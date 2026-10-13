@@ -1,6 +1,5 @@
 import type { NavItem, Profile } from "@/types/profile";
 
-// TODO: заменить заглушки реальными данными перед публикацией.
 export const siteConfig = {
   name: "Сергей Артамонов",
   title: "Сергей Артамонов — Frontend-разработчик",
@@ -12,17 +11,16 @@ export const siteConfig = {
 export const profile: Profile = {
   name: siteConfig.name,
   role: "Frontend-разработчик",
-  bio: "Создаю быстрые, доступные и аккуратные интерфейсы на React и Next.js. Люблю продуманную компонентную архитектуру, строгую типизацию и внимание к деталям.",
-  email: "hello@example.com",
+  bio: "Создаю быстрые, доступные и аккуратные интерфейсы на React и Next.js. Люблю продуманную компонентную архитектуру, создавать полезные проекты и постоянно прокачивать свои навыки.",
+  email: "artamonov4work@ya.ru",
   avatar: {
-    src: "/images/avatar.svg",
+    src: "/images/avatar.jpg",
     alt: "Портрет Сергея Артамонова",
   },
-  stack: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+  stack: ["React", "Next.js", "TypeScript", "JavaScript", "CSS", "HTML"],
   socials: [
-    { platform: "github", label: "GitHub", href: "https://github.com/" },
-    { platform: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/" },
-    { platform: "telegram", label: "Telegram", href: "https://t.me/" },
+    { platform: "github", label: "GitHub", href: "https://github.com/rythMEZ" },
+    { platform: "telegram", label: "Telegram", href: "https://t.me/rythMEEE" },
   ],
 };
 

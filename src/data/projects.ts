@@ -20,7 +20,7 @@ export const filterOptions: ProjectCategoryFilter[] = [
 
 function screenshot(project: number, screen: number, alt: string): ProjectImage {
   return {
-    src: `/images/projects/project-${project}-${screen}.svg`,
+    src: `/images/projects/project-${project}-${screen}.png`,
     alt,
     width: 1600,
     height: 1000,
@@ -33,33 +33,34 @@ function screenshots(project: number, title: string): ProjectImage[] {
   );
 }
 
-// TODO: заменить заглушки реальными проектами, скриншотами и ссылками.
 export const projects: Project[] = [
   {
     id: "1",
-    slug: "task-manager",
-    title: "Менеджер задач",
+    slug: "stellar-Burger",
+    title: "Космическая бургерная",
     description:
-      "Веб-приложение для планирования задач с досками, фильтрами и drag-and-drop.",
+      "Интернет-магазин с конструктором бургеров, авторизацией, профилем пользователя и лентой заказов",
     categories: ["frontend"],
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    technologies: ["React", "TypeScript", "Redux Toolkit", "React Router", "Playwright" ],
     features: [
-      "Доски и колонки с перетаскиванием карточек",
-      "Фильтрация и поиск задач",
-      "Сохранение состояния в localStorage",
+    "Конструктор бургера: выбор булки, добавление, удаление и перестановка ингредиентов",
+    "Лента общих заказов и история заказов пользователя",
+    "Авторизация с защищёнными маршрутами и обновлением токена",
+    "Модальные окна ингредиента и заказа с отдельными URL",
+
     ],
-    images: screenshots(1, "Менеджер задач"),
-    cover: screenshot(1, 1, "Превью проекта «Менеджер задач»"),
+    images: screenshots(1, "Космическая бургерная"),
+    cover: screenshot(1, 1, "Превью проекта «Космическая бургерная»"),
     year: 2025,
     challenge:
-      "Нужно было создать простой инструмент для личного планирования без регистрации и лишних настроек.",
+    "Нужно было собрать клиентскую часть приложения целиком: маршрутизацию, глобальное состояние и авторизацию без перезагрузки страницы.",
     implementation:
-      "Состояние вынесено в типизированный редьюсер, компоненты разделены по ответственности, интерфейс адаптирован под мобильные устройства.",
+      "Состояние разнесено по слайсам Redux Toolkit, запросы к API вынесены в createAsyncThunk, презентационные компоненты отделены от контейнеров, а доступ к закрытым разделам ограничен отдельным компонентом ProtectedRoute. Для проверки логики написаны юнит-тесты редьюсеров и интеграционные тесты пользовательских сценариев с моками сети.",
     result:
-      "Готовое приложение, которое работает офлайн и сохраняет данные между сессиями.",
+      "Работающее SPA с конструктором бургера, лентой заказов и личным кабинетом, покрытое юнит- и интеграционными тестами.",
     liveUrl: "https://example.com",
-    figmaUrl: "https://www.figma.com/",
-    githubUrl: "https://github.com/",
+    figmaUrl: "https://www.figma.com/design/MdS2PmTcdEAh9Cpe6dueSx/React-Fullstack_%25D0%259F%25D1%2580%25D0%25BE%25D0%25B5%25D0%25BA%25D1%2582%25D0%25BD%25D1%258B%25D0%25B5-%25D0%25B7%25D0%25B0%25D0%25B4%25D0%25B0%25D1%2587%25D0%25B8_3-%25D0%25BC%25D0%25B5%25D1%2581%25D1%258F%25D1%2586%25D0%25B0?node-id=1-5647&p=f&t=RTDQkco1gB5N2DS9-0",
+    githubUrl: "https://github.com/rythMEZ/stellar-burgers",
   },
   {
     id: "2",

@@ -9,7 +9,19 @@ import { ProjectFilters } from "./ProjectFilters";
 
 interface ProjectsCatalogProps {
   projects: Project[];
+  tone?: "light" | "dark";
 }
+
+const tones = {
+  light: {
+    empty: "border-border",
+    reset: "border-border hover:border-foreground",
+  },
+  dark: {
+    empty: "border-border-on-dark",
+    reset: "border-border-on-dark hover:border-on-dark",
+  },
+} as const;
 
 function pluralizeProjects(count: number): string {
   const lastTwo = count % 100;
@@ -20,13 +32,17 @@ function pluralizeProjects(count: number): string {
   return "проектов";
 }
 
-export function ProjectsCatalog({ projects }: ProjectsCatalogProps) {
+export function ProjectsCatalog({
+  projects,
+  tone = "light",
+}: ProjectsCatalogProps) {
   const [category, setCategory] = useState<ProjectCategoryFilter>("all");
   const visible = filterProjects(projects, category);
+  const styles = tones[tone];
 
   return (
     <MotionConfig reducedMotion="user">
-      <ProjectFilters active={category} onChange={setCategory} />
+      <ProjectFilters active={category} onChange={setCategory} tone={tone} />
 
       <p role="status" aria-live="polite" className="sr-only">
         {visible.length > 0
@@ -46,20 +62,22 @@ export function ProjectsCatalog({ projects }: ProjectsCatalogProps) {
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.25 }}
               >
-                <ProjectCard project={project} />
+                <ProjectCard project={project} tone={tone} />
               </motion.li>
             ))}
           </AnimatePresence>
         </ul>
       ) : (
-        <div className="mt-8 rounded-card border border-dashed border-border p-10 text-center">
+        <div
+          className={`mt-8 rounded-card border border-dashed p-10 text-center ${styles.empty}`}
+        >
           <p className="text-lg font-medium">
             В категории «{categoryLabels[category]}» пока нет проектов
           </p>
           <button
             type="button"
             onClick={() => setCategory("all")}
-            className="mt-4 min-h-11 rounded-full border border-border px-5 text-sm font-medium transition-colors hover:border-foreground"
+            className={`mt-4 min-h-11 rounded-full border px-5 text-sm font-medium transition-colors ${styles.reset}`}
           >
             Показать все проекты
           </button>

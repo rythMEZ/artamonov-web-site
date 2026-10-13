@@ -5,13 +5,14 @@ import { projects } from "@/data/projects";
 
 export function ProjectsSection() {
   return (
-    <Section id="projects" labelledBy="projects-title">
+    <Section id="projects" tone="dark" labelledBy="projects-title">
       <SectionHeading
         id="projects-title"
         title="Проекты"
         description="Избранные работы: от вёрстки по макетам до полноценных приложений. Выберите категорию или откройте карточку, чтобы узнать подробности."
+        tone="dark"
       />
-      <ProjectsCatalog projects={projects} />
+      <ProjectsCatalog projects={projects} tone="dark" />
     </Section>
   );
 }

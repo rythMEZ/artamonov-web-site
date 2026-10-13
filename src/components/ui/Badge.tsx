@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 interface BadgeProps {
   children: ReactNode;
-  tone?: "light" | "dark" | "solid";
+  tone?: "light" | "dark" | "solid" | "solid-on-dark";
   className?: string;
 }
 
@@ -10,6 +10,7 @@ const tones = {
   light: "border-border text-muted",
   dark: "border-border-on-dark text-muted-on-dark",
   solid: "border-foreground bg-foreground text-background",
+  "solid-on-dark": "border-on-dark bg-on-dark text-ink-dark",
 };
 
 export function Badge({ children, tone = "light", className = "" }: BadgeProps) {

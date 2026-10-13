@@ -6,9 +6,27 @@ import type { ProjectCategoryFilter } from "@/types/project";
 interface ProjectFiltersProps {
   active: ProjectCategoryFilter;
   onChange: (category: ProjectCategoryFilter) => void;
+  tone?: "light" | "dark";
 }
 
-export function ProjectFilters({ active, onChange }: ProjectFiltersProps) {
+const tones = {
+  light: {
+    active: "border-foreground bg-foreground text-background",
+    inactive: "border-border text-foreground hover:border-foreground",
+  },
+  dark: {
+    active: "border-on-dark bg-on-dark text-ink-dark",
+    inactive: "border-border-on-dark text-on-dark hover:border-on-dark",
+  },
+} as const;
+
+export function ProjectFilters({
+  active,
+  onChange,
+  tone = "light",
+}: ProjectFiltersProps) {
+  const styles = tones[tone];
+
   return (
     <div
       role="group"
@@ -25,9 +43,7 @@ export function ProjectFilters({ active, onChange }: ProjectFiltersProps) {
             aria-pressed={isActive}
             onClick={() => onChange(option)}
             className={`min-h-11 rounded-full border px-5 text-sm font-medium transition-colors duration-200 ${
-              isActive
-                ? "border-foreground bg-foreground text-background"
-                : "border-border text-foreground hover:border-foreground"
+              isActive ? styles.active : styles.inactive
             }`}
           >
             {categoryLabels[option]}

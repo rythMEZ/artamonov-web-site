@@ -47,7 +47,7 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
           height={active.height}
           priority
           sizes="(min-width: 1152px) 1088px, 100vw"
-          className="aspect-[16/10] w-full object-cover"
+          className="aspect-[16/10] w-full object-fill"
         />
         <span
           aria-hidden="true"
@@ -81,7 +81,7 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
                     width={image.width}
                     height={image.height}
                     sizes="(min-width: 1024px) 160px, 33vw"
-                    className="aspect-[16/10] w-full object-cover"
+                    className="aspect-[16/10] w-full object-fill"
                   />
                 </button>
               </li>
