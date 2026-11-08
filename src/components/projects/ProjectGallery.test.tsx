@@ -28,13 +28,13 @@ vi.mock("next/image", () => ({
 
 const wideFrame: ProjectImage[] = [
   {
-    src: "/images/projects/project-1-1.png",
+    src: "/images/projects/project-1-1.webp",
     alt: "Космическая бургерная: экран 1",
     width: 2560,
     height: 1440,
   },
   {
-    src: "/images/projects/project-1-2.png",
+    src: "/images/projects/project-1-2.webp",
     alt: "Космическая бургерная: экран 2",
     width: 2560,
     height: 1440,
@@ -43,7 +43,7 @@ const wideFrame: ProjectImage[] = [
 
 const portraitFrame: ProjectImage[] = [
   {
-    src: "/images/projects/project-6-5.png",
+    src: "/images/projects/project-6-5.webp",
     alt: "Узкий вертикальный кадр",
     width: 369,
     height: 1444,

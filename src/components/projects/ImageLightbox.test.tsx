@@ -35,7 +35,7 @@ vi.mock("next/image", () => ({
 }));
 
 const image: ProjectImage = {
-  src: "/images/projects/project-6-2.png",
+  src: "/images/projects/project-6-2.webp",
   alt: "Вертикальный скриншот",
   width: 1200,
   height: 1594,

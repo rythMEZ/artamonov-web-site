@@ -7,7 +7,7 @@ export const skills: SkillGroup[] = [
   },
   {
     title: "Разметка и стилизация",
-    items: ["HTML", "CSS", "Tailwind CSS", "CSS Modules", "BEM"],
+    items: ["HTML", "CSS", "Tailwind CSS",],
   },
   {
     title: "Frontend",
@@ -23,6 +23,6 @@ export const skills: SkillGroup[] = [
   },
   {
     title: "Инструменты",
-    items: ["Git", "GitHub", "Figma", "Vercel"],
+    items: ["Git", "GitHub", "Figma",],
   },
 ];

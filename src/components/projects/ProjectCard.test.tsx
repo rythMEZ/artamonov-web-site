@@ -34,7 +34,7 @@ const project: Project = {
   features: ["Конструктор бургера"],
   images: [],
   cover: {
-    src: "/images/projects/project-1-1.png",
+    src: "/images/projects/project-1-1.webp",
     alt: "Превью проекта «Космическая бургерная»",
     width: 2560,
     height: 1440,

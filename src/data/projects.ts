@@ -25,7 +25,7 @@ function screenshot(
   size: { width: number; height: number } = { width: 2560, height: 1440 },
 ): ProjectImage {
   return {
-    src: `/images/projects/project-${project}-${screen}.png`,
+    src: `/images/projects/project-${project}-${screen}.webp`,
     alt,
     width: size.width,
     height: size.height,

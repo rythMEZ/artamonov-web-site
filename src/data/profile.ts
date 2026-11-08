@@ -14,7 +14,7 @@ export const profile: Profile = {
   bio: "Создаю быстрые, доступные и аккуратные интерфейсы на React и Next.js. Люблю продуманную компонентную архитектуру, создавать полезные проекты и постоянно прокачивать свои навыки.",
   email: "artamonov4work@ya.ru",
   avatar: {
-    src: "/images/avatar.jpg",
+    src: "/images/avatar.webp",
     alt: "Портрет Сергея Артамонова",
   },
   stack: ["React", "Next.js", "TypeScript", "JavaScript", "CSS", "HTML"],
