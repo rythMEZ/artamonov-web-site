@@ -73,7 +73,7 @@ export const projects: Project[] = [
 // },
   {
     id: "2",
-    slug: "stellar-Burger",
+    slug: "stellar-burger",
     title: "Космическая бургерная",
     description:
       "Интернет-магазин с конструктором бургеров, авторизацией, профилем пользователя и лентой заказов",
@@ -217,7 +217,7 @@ export const projects: Project[] = [
   result:
     "Адаптивный лонгрид с тремя режимами оформления и узнаваемым неоновым героем «no focus».",
   githubUrl: "https://github.com/rythMEZ/slozhno-sosredotochitsya-fd",
-  figmaUrl: "https://www.figma.com/design/92C0vV1ZCsVpgN9cH2DZ2d/Yandex--%D0%92%D0%B5%D0%B1-%D0%BB%D0%B0%D1%80%D1%91%D0%BA-?node-id=201-9445&p=f&t=XZ9Jl7yqgFHBm1Wp-0",
+  figmaUrl: "https://www.figma.com/design/qhgelUhPHUbJVf3jgZsaD7/3-%D1%81%D0%BF%D1%80%D0%B8%D0%BD%D1%82.-%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BD%D0%B0%D1%8F-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0?node-id=0-1&p=f&t=f2Nx8iOygwve0VxU-0",
   liveUrl: "https://rythmez.github.io/slozhno-sosredotochitsya-fd/"
 },
 {
