@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/Badge";
 import { Reveal } from "@/components/ui/Reveal";
+import { SkillChip } from "@/components/ui/SkillChip";
 import { skills } from "@/data/skills";
 
 interface SkillsProps {
@@ -9,13 +9,13 @@ interface SkillsProps {
 const tones = {
   light: {
     card: "border-border",
-    groupTitle: "text-muted",
-    badge: "light",
+    groupTitle: "text-foreground",
+    chip: "light",
   },
   dark: {
     card: "border-border-on-dark",
-    groupTitle: "text-muted-on-dark",
-    badge: "dark",
+    groupTitle: "text-on-dark",
+    chip: "dark",
   },
 } as const;
 
@@ -32,7 +32,7 @@ export function Skills({ tone = "light" }: SkillsProps) {
       </h3>
       <ul
         aria-labelledby="skills-title"
-        className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+        className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
       >
         {skills.map((group, index) => (
           <li key={group.title}>
@@ -40,13 +40,13 @@ export function Skills({ tone = "light" }: SkillsProps) {
               <div
                 className={`h-full rounded-card border p-5 ${styles.card}`}
               >
-                <h4 className={`mb-4 text-sm font-medium ${styles.groupTitle}`}>
+                <h4 className={`mb-4 text-base font-medium ${styles.groupTitle}`}>
                   {group.title}
                 </h4>
                 <ul className="flex flex-wrap gap-2">
                   {group.items.map((item) => (
                     <li key={item}>
-                      <Badge tone={styles.badge}>{item}</Badge>
+                      <SkillChip tone={styles.chip}>{item}</SkillChip>
                     </li>
                   ))}
                 </ul>

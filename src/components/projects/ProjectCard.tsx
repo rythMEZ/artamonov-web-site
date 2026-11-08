@@ -46,7 +46,7 @@ export function ProjectCard({ project, tone = "light" }: ProjectCardProps) {
           width={project.cover.width}
           height={project.cover.height}
           sizes="(min-width: 1024px) 384px, (min-width: 640px) 50vw, 100vw"
-          className="h-full w-full object-fill transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
         />
       </div>
 

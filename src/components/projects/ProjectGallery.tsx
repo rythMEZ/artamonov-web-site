@@ -47,7 +47,10 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
           height={active.height}
           priority
           sizes="(min-width: 1152px) 1088px, 100vw"
-          className="aspect-[16/10] w-full object-fill"
+          // Атрибуты width/height дают aspect-ratio: auto. С auto рамка
+          // схлопывается к файлу и портретный скриншот растягивает страницу.
+          style={{ aspectRatio: `${active.width} / ${active.height}` }}
+          className="h-auto w-full object-contain"
         />
         <span
           aria-hidden="true"
@@ -81,7 +84,7 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
                     width={image.width}
                     height={image.height}
                     sizes="(min-width: 1024px) 160px, 33vw"
-                    className="aspect-[16/10] w-full object-fill"
+                    className="aspect-[16/10] w-full object-cover"
                   />
                 </button>
               </li>

@@ -11,7 +11,7 @@ export function Experience() {
       <SectionHeading
         id="experience-title"
         title="Опыт и навыки"
-        description="Где я работал и учился, чего достиг и с какими технологиями работаю."
+        description="Где я работал, чего достиг и с какими технологиями работаю."
         tone="light"
       />
 
@@ -43,7 +43,7 @@ export function Experience() {
                   </div>
                   <div>
                     <h4 className="mb-3 text-sm font-medium uppercase tracking-widest text-muted">
-                      Достижения
+                      Над чем работал
                     </h4>
                     <ul className="list-disc space-y-2 pl-5 marker:text-muted">
                       {item.achievements.map((line) => (

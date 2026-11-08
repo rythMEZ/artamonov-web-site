@@ -1,8 +1,28 @@
 import type { SkillGroup } from "@/types/profile";
 
 export const skills: SkillGroup[] = [
-  { title: "Языки", items: ["TypeScript", "JavaScript", "HTML", "CSS"] },
-  { title: "Фреймворки", items: ["React", "Next.js"] },
-  { title: "Стили", items: ["Tailwind CSS", "CSS Modules", "Адаптивная вёрстка"] },
-  { title: "Инструменты", items: ["Git", "GitHub", "Figma", "Vercel"] },
+  {
+    title: "Языки программирования",
+    items: ["JavaScript", "TypeScript"],
+  },
+  {
+    title: "Разметка и стилизация",
+    items: ["HTML", "CSS", "Tailwind CSS", "CSS Modules", "BEM"],
+  },
+  {
+    title: "Frontend",
+    items: ["React", "Next.js"],
+  },
+  {
+    title: "Backend",
+    items: ["Node.js", "NestJS"],
+  },
+  {
+    title: "Базы данных",
+    items: ["MongoDB", "PostgreSQL"],
+  },
+  {
+    title: "Инструменты",
+    items: ["Git", "GitHub", "Figma", "Vercel"],
+  },
 ];
